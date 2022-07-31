@@ -14,7 +14,7 @@ const Messages = () => {
       .then((d) => {
         let rev = [...d.contacts].reverse();
         setData(() => rev);
-      });
+      }).catch(err => console.log(err))
   };
 
   const myCard = {

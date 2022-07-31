@@ -13,7 +13,7 @@ const Contacts = () => {
         `http://localhost:9211/contacts`
     )
       .then((res) => res.json())
-      .then((d) => setData(() => d.contacts));
+      .then((d) => setData(() => d.contacts)).catch(err => console.log(err))
   };
 
   localStorage.setItem("data", JSON.stringify(data));
