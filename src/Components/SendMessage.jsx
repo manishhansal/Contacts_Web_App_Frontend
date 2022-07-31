@@ -31,18 +31,16 @@ const SendMessage = () => {
 
   const saveMessage = () => {
     const payloadjson = JSON.stringify(save);
-
-    fetch(
-      `https://my-contacts-web-app.herokuapp.com/messages` ||
-        `http://localhost:9211/messages`,
-      {
-        method: "POST",
-        body: payloadjson,
-        headers: {
-          "content-type": "application/json",
-        },
-      }
-    )
+    const url =
+      "http://localhost:9211/messages" ||
+      "https://my-contacts-web-app.herokuapp.com/messages";
+    fetch(url, {
+      method: "POST",
+      body: payloadjson,
+      headers: {
+        "content-type": "application/json",
+      },
+    })
       .then((res) => res.json())
       .then((response) => {})
       .catch((err) => console.log(err));
@@ -54,18 +52,16 @@ const SendMessage = () => {
       message: value,
     };
     const payloadjson = JSON.stringify(details);
-
-    fetch(
-      `https://my-contacts-web-app.herokuapp.com/sendMessage` ||
-        `http://localhost:9211/sendMessage`,
-      {
-        method: "POST",
-        body: payloadjson,
-        headers: {
-          "content-type": "application/json",
-        },
-      }
-    )
+    const url =
+      "http://localhost:9211/sendMessage" ||
+      "https://my-contacts-web-app.herokuapp.com/sendMessage";
+    fetch(url, {
+      method: "POST",
+      body: payloadjson,
+      headers: {
+        "content-type": "application/json",
+      },
+    })
       .then((res) => res.json())
       .then((response) => {
         console.log(response);

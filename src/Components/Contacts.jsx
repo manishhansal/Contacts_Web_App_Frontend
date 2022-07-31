@@ -8,12 +8,13 @@ const Contacts = () => {
     getData();
   }, []);
   const getData = () => {
-    fetch(
-      `https://my-contacts-web-app.herokuapp.com/contacts` ||
-        `http://localhost:9211/contacts`
-    )
+    const url =
+      "http://localhost:9211/contacts" ||
+      "https://my-contacts-web-app.herokuapp.com/contacts";
+    fetch(url)
       .then((res) => res.json())
-      .then((d) => setData(() => d.contacts)).catch(err => console.log(err))
+      .then((d) => setData(() => d.contacts))
+      .catch((err) => console.log(err));
   };
 
   localStorage.setItem("data", JSON.stringify(data));

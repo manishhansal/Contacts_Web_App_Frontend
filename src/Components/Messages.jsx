@@ -6,15 +6,16 @@ const Messages = () => {
     getData();
   }, []);
   const getData = () => {
-    fetch(
-      `https://my-contacts-web-app.herokuapp.com/messages` ||
-        `http://localhost:9211/messages`
-    )
+    const url =
+      "http://localhost:9211/messages" ||
+      "https://my-contacts-web-app.herokuapp.com/messages";
+    fetch(url)
       .then((res) => res.json())
       .then((d) => {
         let rev = [...d.contacts].reverse();
         setData(() => rev);
-      }).catch(err => console.log(err))
+      })
+      .catch((err) => console.log(err));
   };
 
   const myCard = {
