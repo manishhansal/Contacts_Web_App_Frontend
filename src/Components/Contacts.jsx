@@ -8,7 +8,10 @@ const Contacts = () => {
     getData();
   }, []);
   const getData = () => {
-    fetch(`http://localhost:9211/contacts`)
+    fetch(
+      `https://my-contacts-web-app.herokuapp.com/contacts` ||
+        `http://localhost:9211/contacts`
+    )
       .then((res) => res.json())
       .then((d) => setData(() => d.contacts));
   };

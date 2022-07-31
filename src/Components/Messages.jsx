@@ -6,7 +6,10 @@ const Messages = () => {
     getData();
   }, []);
   const getData = () => {
-    fetch(`http://localhost:9211/messages`)
+    fetch(
+      `https://my-contacts-web-app.herokuapp.com/messages` ||
+        `http://localhost:9211/messages`
+    )
       .then((res) => res.json())
       .then((d) => {
         let rev = [...d.contacts].reverse();
