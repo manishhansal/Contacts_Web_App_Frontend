@@ -7,8 +7,8 @@ const Messages = () => {
   }, []);
   const getData = () => {
     const url =
-      "http://localhost:9211/messages" ||
-      "https://my-contacts-web-app.herokuapp.com/messages";
+      "https://my-contacts-web-app.herokuapp.com/messages" ||
+      "http://localhost:9211/messages";
     fetch(url)
       .then((res) => res.json())
       .then((d) => {

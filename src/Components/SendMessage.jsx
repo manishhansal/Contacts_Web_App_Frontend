@@ -32,8 +32,8 @@ const SendMessage = () => {
   const saveMessage = () => {
     const payloadjson = JSON.stringify(save);
     const url =
-      "http://localhost:9211/messages" ||
-      "https://my-contacts-web-app.herokuapp.com/messages";
+      "https://my-contacts-web-app.herokuapp.com/messages" ||
+      "http://localhost:9211/messages";
     fetch(url, {
       method: "POST",
       body: payloadjson,
@@ -53,8 +53,8 @@ const SendMessage = () => {
     };
     const payloadjson = JSON.stringify(details);
     const url =
-      "http://localhost:9211/sendMessage" ||
-      "https://my-contacts-web-app.herokuapp.com/sendMessage";
+      "https://my-contacts-web-app.herokuapp.com/sendMessage" ||
+      "http://localhost:9211/sendMessage";
     fetch(url, {
       method: "POST",
       body: payloadjson,
