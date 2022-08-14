@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Loader from "./Loader";
 
 const Messages = () => {
   const [data, setData] = useState([]);
@@ -31,7 +32,7 @@ const Messages = () => {
   return (
     <div>
       {data.length === 0 ? (
-        <h1>Loading...</h1>
+        <Loader/>
       ) : (
         data.map((item) => {
           return (

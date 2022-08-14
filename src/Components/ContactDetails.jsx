@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import Loader from "./Loader";
 
 const myCard = {
   width: "300px",
@@ -22,7 +23,7 @@ const ContactDetails = () => {
   return (
     <div style={myCard}>
       {data.length === 0 ? (
-        <h1>Loading...</h1>
+        <Loader/>
       ) : (
         data
           .filter((contact) => contact._id === contactId)

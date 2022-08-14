@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import Loader from "./Loader";
 
 const Contacts = () => {
   const [data, setData] = useState([]);
@@ -22,7 +23,7 @@ const Contacts = () => {
   return (
     <div className="ContactsList">
       {data.length === 0 ? (
-        <h1>Loading...</h1>
+        <Loader/>
       ) : (
         data.map((contact, idx) => {
           return (
