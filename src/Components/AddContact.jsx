@@ -23,7 +23,9 @@ const AddContact = () => {
     e.preventDefault();
     if (form.first_name !== "" && form.last_name !== "" && form.phone !== "") {
       const payloadjson = JSON.stringify(form);
-      const url = "http://localhost:9211/contacts";
+      const url =
+      "https://my-contacts-web-app.herokuapp.com/contacts" ||
+      "http://localhost:9211/contacts";
       fetch(url, {
         method: "POST",
         body: payloadjson,
