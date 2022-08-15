@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import AddContact from "./Components/AddContact";
 import ContactDetails from "./Components/ContactDetails";
 import Contacts from "./Components/Contacts";
 import Messages from "./Components/Messages";
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <AddContact/>
       <Routes>
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/messages" element={<Messages />} />

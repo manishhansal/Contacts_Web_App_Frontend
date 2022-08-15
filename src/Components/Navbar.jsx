@@ -8,14 +8,18 @@ const myDiv = {
   backgroundColor: "aqua",
 };
 
+const head = {
+  fontSize: "30px"
+}
+
 const Navbar = () => {
   return (
     <div style={myDiv}>
       <Link style={{ textDecoration: "none" }} to="/contacts">
-        <h2>Contacts</h2>
+        <h1 style={head}>Contacts</h1>
       </Link>
       <Link style={{ textDecoration: "none" }} to="/messages">
-        <h2>Messages</h2>
+        <h1 style={head}>Messages</h1>
       </Link>
     </div>
   );
